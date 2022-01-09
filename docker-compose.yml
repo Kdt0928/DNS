@@ -1,9 +1,10 @@
 version: "3"
 services:
-  bind:
-    build: ./BIND/
-    image: bind
-    container_name: bind
-    tty: true
-    ports:
+  named: 
+    build: .
+    image: dns_bind
+    container_name: dns_bind
+    hostname: dns-server
+    ports: 
       - "53:53"
+      - "53:53/udp"

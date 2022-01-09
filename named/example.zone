@@ -1,0 +1,11 @@
+$ORIGIN example.
+$TTL      86400
+@         IN       SOA     dns.example. root.example. (
+                                        2020120900 ; Serial
+                                        28800      ; Refresh
+                                        14400      ; Retry
+                                        3600000    ; Expire
+                                        86400 )    ; Minimum
+          IN       NS      dns.example.
+server01  IN       A       192.168.20.101
+server02  IN       A       192.168.20.202
